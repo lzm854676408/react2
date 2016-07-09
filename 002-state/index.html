@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>state-count</title>
+</head>
+<body>
+
+  <script src="../react-0.14.7/build/react.js"></script>
+  <script src="../react-0.14.7/build/react-dom.js"></script>
+  <script src="../react-0.14.7/build/browser.min.js"></script>
+
+
+  <div id="container"></div>
+
+  <script type="text/babel">
+    var Counter = React.createClass({
+
+      getInitialState: function(){
+        return{
+          count:0
+        };
+      },
+      handelClick: function(){
+        this.setState({
+          count:this.state.count+1,
+        });
+      },
+      render: function() {
+        return (
+          <div>
+            <h1>数量:{this.state.count}</h1>
+            <button onClick = {this.handelClick}>click</button>
+            <div></div>
+          </div>
+        );
+      }
+    });
+    ReactDOM.render(<Counter />,document.getElementById('container'));
+  </script>
+
+</body>
+</html>
