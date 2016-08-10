@@ -56,7 +56,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Cards = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/Cards.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _Cards = __webpack_require__(172);
 
 	var _Cards2 = _interopRequireDefault(_Cards);
 
@@ -72,7 +72,6 @@
 	//   title:'来自外部变量',
 	//   bg:'blue'
 	// }
-
 	var App = function (_Component) {
 	  _inherits(App, _Component);
 
@@ -95,7 +94,7 @@
 	        _react2.default.createElement(Button, btnProps),
 	        '// ',
 	        btns,
-	        _react2.default.createElement(CardList, { title: 'hello', date: '2016.07.01', index: '1' })
+	        _react2.default.createElement(_Cards2.default, null)
 	      )
 
 	      // <p>hello {this.props.name},{this.props.where}</p>
@@ -7734,7 +7733,7 @@
 	  var prevEmpty = prevElement === null || prevElement === false;
 	  var nextEmpty = nextElement === null || nextElement === false;
 
-	  return(
+	  return (
 	    // This has a few false positives w/r/t empty components.
 	    prevEmpty || nextEmpty || nextElement._owner !== prevElement._owner || nextElement.ref !== prevElement.ref
 	  );
@@ -10247,7 +10246,7 @@
 	 * @return {boolean}
 	 */
 	function hasArrayNature(obj) {
-	  return(
+	  return (
 	    // not null/false
 	    !!obj && (
 	    // arrays are objects, NodeLists are functions in Safari
@@ -21178,6 +21177,171 @@
 	var ReactMount = __webpack_require__(164);
 
 	module.exports = ReactMount.renderSubtreeIntoContainer;
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _CardList = __webpack_require__(173);
+
+	var _CardList2 = _interopRequireDefault(_CardList);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Cards = [{ title: '1234', date: '2016.07.01' }, { title: '4534', date: '2016.07.03' }, { title: '7894', date: '2016.07.05' }];
+
+	var Card = function (_Component) {
+	  _inherits(Card, _Component);
+
+	  function Card() {
+	    _classCallCheck(this, Card);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Card).apply(this, arguments));
+	  }
+
+	  _createClass(Card, [{
+	    key: 'render',
+	    value: function render() {
+	      var AllCards = [];
+	      for (var i = 0; i < Cards.length; i++) {
+	        var j = i + 1;
+	        AllCards.push(_react2.default.createElement(_CardList2.default, { title: Cards[i].title, data: Cards[i].data, index: j, key: i }));
+	      };
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        AllCards
+	      );
+	    }
+	  }]);
+
+	  return Card;
+	}(_react.Component);
+
+	exports.default = Card;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CardList = function (_Component) {
+	  _inherits(CardList, _Component);
+
+	  function CardList() {
+	    _classCallCheck(this, CardList);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(CardList).apply(this, arguments));
+	  }
+
+	  _createClass(CardList, [{
+	    key: 'render',
+	    value: function render() {
+	      var styles = {
+	        root: {
+	          width: '80%',
+	          height: '50px',
+	          backgroundColor: 'rgba(0 0 0 0.5)',
+	          margin: '0 auto'
+	        },
+	        left: {
+	          width: '30%',
+	          height: '50px',
+	          lineHeight: '50px',
+	          textAlign: 'center',
+	          color: '#fff',
+	          backgroundColor: 'teal',
+	          float: 'left'
+	        },
+	        right: {
+	          height: '50px',
+	          paddingLeft: '20px',
+	          color: '#fff',
+	          float: 'left'
+	        }
+	      };
+	      return _react2.default.createElement(
+	        'div',
+	        { style: styles.root },
+	        _react2.default.createElement(
+	          'div',
+	          { style: styles.left },
+	          this.props.index
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: styles.right },
+	          _react2.default.createElement(
+	            'h3',
+	            null,
+	            this.props.title
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.props.date
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CardList;
+	}(_react.Component);
+
+	CardList.propTypes = {
+	  title: _react2.default.PropTypes.string.isRequired,
+	  index: _react2.default.PropTypes.number.isRequired,
+	  data: _react2.default.PropTypes.string.isRequired
+	};
+	CardList.defaultProps = {
+	  title: "请输入标题",
+	  index: 1,
+	  data: '2016.7.19'
+	};
+
+	// Card.propTypes = {
+	//   title: React.PropTypes.string.isRaquired,
+	//   bg: React.PropTypes.string.isRaquired,
+	// }
+	exports.default = CardList;
 
 /***/ }
 /******/ ]);

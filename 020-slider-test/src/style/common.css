@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  width:300%;
+  height:100vh;
+  transition: all 1s;
+}
+li{
+  list-style: none;
+  float: left;
+  overflow: hidden;
+  width: 33.3%;
+  height: 100vh;
+}
+img{
+  display: block;
+  width: 100%;
+}

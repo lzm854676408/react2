@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-class Card extends Component {
+class CardList extends Component {
 
 
   render(){
@@ -42,13 +42,19 @@ class Card extends Component {
 }
 
 
-CardList.defualtProps={
-  index:1,
-  title:'标题',
-  date:'2016.07.01'
-}
+CardList.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  index: React.PropTypes.number.isRequired,
+  data: React.PropTypes.string.isRequired,
+};
+CardList.defaultProps = {
+  title: "请输入标题",
+  index: 1,
+  data: '2016.7.19',
+};
+
 // Card.propTypes = {
 //   title: React.PropTypes.string.isRaquired,
 //   bg: React.PropTypes.string.isRaquired,
 // }
-export default Card;
+export default CardList;

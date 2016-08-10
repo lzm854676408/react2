@@ -16,7 +16,7 @@ class App extends Component {
         // <Button title={btnProps.title} />
         // <Button {...btnProps} />
         // {btns}
-        <CardList title="hello" date="2016.07.01" index="1"/>
+        <Cards />
       </div>
 
       // <p>hello {this.props.name},{this.props.where}</p>
